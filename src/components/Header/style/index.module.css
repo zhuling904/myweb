@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0af97;
+  padding: 24px 100px;
+  color: white;
+}
+.container .right .pages .pageName {
+  margin-left: 48px;
+}

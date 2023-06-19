@@ -1,8 +1,10 @@
 import Header from "../../components/Header"
-
+import style from './style/index.module.less';
 const Home = () => {
     return <>
-        <Header></Header>
+        <div className={style.container}>
+            <Header></Header>
+        </div>
     </>
 }
 
