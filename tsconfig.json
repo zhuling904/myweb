@@ -1,25 +1,55 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    // 只编译修改过的文件,这个时候会生成tsconfig.tsbuildinfo,下次编译的时候会进行对比只编译修改过的文件 
+    "incremental": true,
+    // 指定 ECMAScript 目标版本: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'
+    "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    /* 注意：如果未指定--lib，则会注入默认的librares列表。注入的默认库为：
+       对于 --target ES5: DOM,ES5,ScriptHost
+       对于 --target ES6: DOM,ES6,DOM.Iterable,ScriptHost
+       TS 绝不会在您的代码中注入polyfill,所以需要你自己制定编译lib */
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable",
+      "ES6",
+      "ES7"
+    ],
+    "allowJs": true,
+    // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
     "module": "ESNext",
+    "rootDir": "./src",
     "skipLibCheck": true,
-
+    // 编译的时候删除注释
+    "removeComments": true,
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+     // 指定 jsx 代码的生成: 'preserve', 'react-native', or 'react'
     "jsx": "react-jsx",
-
     /* Linting */
     "strict": true,
+    "typeRoots": ["./type"],
     "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  // 指定需要编译文件 否则默认当前目录下除了exclude之外的所有.ts, .d.ts,.tsx 文件
+  "include": [
+    "src"
+  ],
+  // 指定需要编译文件 否则默认当前目录下除了exclude之外的所有.ts, .d.ts,.tsx 文件
+  "files": [],
+  // 不编译某些文件
+  "exclude": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
