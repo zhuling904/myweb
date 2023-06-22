@@ -11,7 +11,7 @@ const Header = () => {
                     {
                         PAGES.map(item => {
                             return <>
-                                <span className={style.pageName}>{ item }</span>
+                                <span key={ item } className={style.pageName}>{ item }</span>
                             </>
                         })
                     }
