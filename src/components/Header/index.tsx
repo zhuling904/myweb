@@ -9,9 +9,9 @@ const Header = () => {
             <div className={style.right}>
                 <div className={style.pages}>
                     {
-                        PAGES.map(item => {
+                        PAGES.map((item,index) => {
                             return <>
-                                <span key={ item } className={style.pageName}>{ item }</span>
+                                <span key={ item } style={{animationDelay: `${0.2 * index}s`}} className={style.pageName}>{ item }</span>
                             </>
                         })
                     }

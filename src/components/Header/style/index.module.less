@@ -1,20 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(240, 175, 151);
+    background-color: transparent;
     padding: 24px 100px;
     color: white;
-    .left{
-        .webName{
 
+    .left {
+        .webName {
+            font-size: 25px;
+            color: #fff;
+            // 文本修饰
+            text-decoration: none;
+            font-weight: 600;
+            cursor: default;
+            opacity: 0;
+            animation: slideRight 1s ease forwards;
         }
     }
-    .right{
-        .pages{
-            .pageName{
-                margin-left: 48px;
+
+    .right {
+        .pages {
+            .pageName {
+                display: inline-block;
+                font-size: 18px;
+                color: #fff;
+                text-decoration: none;
+                font-weight: 500;
+                margin-left: 35px;
+                opacity: 0;
+                transition: 0.3s;
+                animation: slideTop 1s ease forwards;
             }
         }
+    }
+}
+
+
+/* 动画 */
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

@@ -44,7 +44,7 @@
     "src"
   ],
   // 指定需要编译文件 否则默认当前目录下除了exclude之外的所有.ts, .d.ts,.tsx 文件
-  "files": [],
+  "files": ["./type/typing.d.ts", "./type/styles.d.ts"],
   // 不编译某些文件
   "exclude": [],
   "references": [
