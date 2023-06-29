@@ -2,6 +2,7 @@ import style from './style/index.module.less';
 import imgUrl from './img/3D.jpg';
 import Typed from 'typed.js';
 import React, { useEffect } from 'react';
+import SocialContact from '../SocialContact';
 const HomeContent = () => {
     const el = React.useRef(null);
     useEffect(() => {
@@ -27,7 +28,9 @@ const HomeContent = () => {
                     <h3>And I'm a <span ref={el}></span></h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing dlit . Accusantium,ab autem repellat reiciendis ipsam perspicictis.</p>
                 </div>
-                <div className={style.link}></div>
+                <div className={style.link}>
+                    <SocialContact />
+                </div>
                 <div className={style.buttonContaner}>Start Exploring</div>
             </div>
             <div className={style.right}>
