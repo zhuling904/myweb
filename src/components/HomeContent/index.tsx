@@ -1,5 +1,5 @@
 import style from './style/index.module.less';
-import imgUrl from './img/3D.png';
+import imgUrl from './img/3D.jpg';
 import Typed from 'typed.js';
 import React, { useEffect } from 'react';
 const HomeContent = () => {
