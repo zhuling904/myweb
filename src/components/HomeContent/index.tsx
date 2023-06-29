@@ -1,10 +1,10 @@
 import style from './style/index.module.less';
-import imgUrl from './img/home.jpg';
+import imgUrl from './img/3D.png';
 import Typed from 'typed.js';
-import React from 'react';
+import React, { useEffect } from 'react';
 const HomeContent = () => {
     const el = React.useRef(null);
-    React.useEffect(() => {
+    useEffect(() => {
         const typed = new Typed(el.current, {
             strings: ['Frontend Developer', "Basketball lover", "liberal"],
             typeSpeed: 100,
@@ -17,6 +17,7 @@ const HomeContent = () => {
             typed.destroy();
         };
     }, []);
+
     return <>
         <div className={style.container}>
             <div className={style.left}>
@@ -27,7 +28,7 @@ const HomeContent = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing dlit . Accusantium,ab autem repellat reiciendis ipsam perspicictis.</p>
                 </div>
                 <div className={style.link}></div>
-                <div className={style.buttonContaner}>Download CV</div>
+                <div className={style.buttonContaner}>Start Exploring</div>
             </div>
             <div className={style.right}>
                 <div className={style.homeImg}>
