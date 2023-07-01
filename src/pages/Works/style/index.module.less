@@ -1,16 +1,23 @@
 .container {
-    height: 100vh;
-    padding: 24px 40px;
-    .test {
-        background-color: red;
-    }
-    .tabItem{
-        display: flex;
-        align-items: center;
+    border-top: 0.5 solid white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .tabItem {
+        display: inline-block;
+        margin-left: 30px;
+        margin-top: 30px;
         color: rgb(37, 36, 35);
-        border: 1px solid red;
-        &:hover{
+        border-radius: 8px;
+        &:first-child {
+            margin-left: 0px;
+        }
+        &:hover {
             color: rgb(255, 255, 255);
         }
+
+        -webkit-box-shadow: -2px 0px 8px 0px rgba(73, 87, 111, 0.37);
+        -moz-box-shadow: -2px 0px 8px 0px rgba(73, 87, 111, 0.37);
+        box-shadow: -2px 0px 8px 0px rgba(73, 87, 111, 0.37);
     }
 }

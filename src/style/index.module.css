@@ -3,7 +3,8 @@ body {
   height: 100%;
   background: #dcc4b4;
   margin: 0;
-  padding: 0;
+  padding: 0 100px;
   box-sizing: border-box;
+  overflow: hidden;
   font-family: "Poppins", sans-serif;
 }

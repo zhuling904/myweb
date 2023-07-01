@@ -5,7 +5,7 @@ const Header = () => {
     return <>
         <div className={style.container}>
             <div className={style.left}>
-                <div className={style.webName}>{ WEB_NAME }</div>
+                <NavLink to='/' className={style.webName}>{ WEB_NAME }</NavLink>
             </div>
             <div className={style.right}>
                 <div className={style.pages}>

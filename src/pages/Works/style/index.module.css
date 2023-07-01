@@ -1,15 +1,21 @@
 .container {
-  height: 100vh;
-  padding: 24px 40px;
-}
-.container .test {
-  background-color: red;
+  border-top: 0.5 solid white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .container .tabItem {
-  display: flex;
-  align-items: center;
+  display: inline-block;
+  margin-left: 30px;
+  margin-top: 30px;
   color: #252423;
-  border: 1px solid red;
+  border-radius: 8px;
+  -webkit-box-shadow: -2px 0px 8px 0px rgba(73, 87, 111, 0.37);
+  -moz-box-shadow: -2px 0px 8px 0px rgba(73, 87, 111, 0.37);
+  box-shadow: -2px 0px 8px 0px rgba(73, 87, 111, 0.37);
+}
+.container .tabItem:first-child {
+  margin-left: 0px;
 }
 .container .tabItem:hover {
   color: #ffffff;

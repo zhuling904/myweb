@@ -1,7 +1,9 @@
+import Header from "../components/Header";
 import MyRouter from "../router";
 const App = () => {
     return <>
-        <MyRouter/>
+        <Header></Header>
+        <MyRouter />
     </>
 }
 
