@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import { PAGES, WEB_NAME } from './constants';
 import style from './style/index.module.less';
 const Header = () => {
@@ -11,7 +12,7 @@ const Header = () => {
                     {
                         PAGES.map((item,index) => {
                             return <>
-                                <span key={ item } style={{animationDelay: `${0.2 * index}s`}} className={style.pageName}>{ item }</span>
+                                <NavLink to={item.router} key={ item.title } style={{animationDelay: `${0.2 * index}s`}} className={style.pageName}>{ item.title }</NavLink>
                             </>
                         })
                     }

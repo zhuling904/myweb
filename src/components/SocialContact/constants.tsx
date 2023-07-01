@@ -17,12 +17,12 @@ export const SOCIAL_CONTACT = [
     {
         title: 'Email',
         link: '',
-        email: '514034541@qq.com'
+        info: '514034541@qq.com'
     },
     {
         title: 'WeChat',
         link: '',
-        img: ''
+        info: 'Doerr_33'
     }
 ]
 
@@ -35,7 +35,7 @@ export function normalIcons(title: string) {
         case 'CodeSandbox':
             return <AiFillCodeSandboxCircle></AiFillCodeSandboxCircle>;
         case 'Email':
-            return <HiOutlineMailOpen></HiOutlineMailOpen>;
+            return <HiOutlineMailOpen></HiOutlineMailOpen>
         case 'WeChat':
             return <AiOutlineWechat></AiOutlineWechat>
     }

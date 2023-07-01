@@ -51,6 +51,7 @@
   animation: slideRight 1s ease forwards;
 }
 .container .right .pages .pageName {
+  cursor: pointer;
   display: inline-block;
   font-size: 18px;
   color: #fff;
@@ -60,6 +61,9 @@
   opacity: 0;
   transition: 0.3s;
   animation: slideTop 1s ease forwards;
+}
+.container .right .pages .pageName:hover {
+  color: #ac8978;
 }
 /* 动画 */
 @keyframes slideRight {
