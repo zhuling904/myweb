@@ -2,13 +2,13 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex: 1;
 }
 .container .left {
   position: relative;
   width: 620px;
   align-items: center;
-  padding-top: 70px;
-  padding-left: 100px;
   color: white;
 }
 .container .left .desc h3 {
@@ -69,17 +69,15 @@
   border: 2px solid #e9c1b1;
 }
 .container .right {
-  width: 600px;
-  height: 600px;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 .container .right .homeImg {
   height: 100%;
   width: 100%;
   max-width: 450px;
   max-height: 450px;
+  aspect-ratio: 1;
 }
 .container .right .homeImg img {
   width: 100%;
