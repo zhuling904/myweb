@@ -6,7 +6,7 @@
 }
 .container .cardItem {
   width: 48%;
-  height: 450px;
+  height: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
