@@ -3,6 +3,7 @@ import imgUrl from './img/3D.jpg';
 import Typed from 'typed.js';
 import React, { useEffect } from 'react';
 import SocialContact from '../SocialContact';
+import { NavLink } from 'react-router-dom';
 const HomeContent = () => {
     const el = React.useRef(null);
     useEffect(() => {
@@ -29,9 +30,11 @@ const HomeContent = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing dlit . Accusantium,ab autem repellat reiciendis ipsam perspicictis.</p>
                 </div>
                 <div className={style.link}>
-                    <SocialContact />
+                    <SocialContact type='withBorder'/>
                 </div>
-                <div className={style.buttonContaner}>Start Exploring</div>
+                <div className={style.buttonContaner}>
+                    <NavLink className={style.button} to={'/works'}>Start Exploring</NavLink>
+                </div>
             </div>
             <div className={style.right}>
                 <div className={style.homeImg}>

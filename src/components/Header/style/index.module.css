@@ -39,11 +39,11 @@
   justify-content: space-between;
   background-color: transparent;
   padding: 24px 0;
-  color: white;
+  color: #282938;
 }
 .container .left .webName {
   font-size: 25px;
-  color: #fff;
+  color: #282938;
   text-decoration: none;
   font-weight: 600;
   cursor: pointer;
@@ -54,7 +54,7 @@
   cursor: pointer;
   display: inline-block;
   font-size: 18px;
-  color: #fff;
+  color: #282938;
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
@@ -63,7 +63,7 @@
   animation: slideTop 1s ease forwards;
 }
 .container .right .pages .pageName:hover {
-  color: #ac8978;
+  color: #696a6e;
 }
 /* 动画 */
 @keyframes slideRight {

@@ -1,7 +1,7 @@
 .container {
   display: flex;
 }
-.container .social {
+.container .socialWithBorder {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -9,9 +9,9 @@
   width: 40px;
   height: 40px;
   background: transparent;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--color-font-black);
   border-radius: 50%;
-  color: #ffffff;
+  color: var(--color-font-black);
   font-size: 20px;
   text-decoration: none;
   margin: 30px 15px 30px 0;
@@ -19,10 +19,32 @@
   opacity: 0;
   animation: slideLeft 1s ease forwards;
 }
-.container .social:hover {
+.container .socialWithBorder:hover {
   background: #ffffff;
   color: #1f242d;
   border: 2px solid #ffffff;
+  box-shadow: 0 0 20px #b7b2a9;
+}
+.container .social {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border-radius: 50%;
+  color: var(--color-font-black);
+  font-size: 20px;
+  text-decoration: none;
+  margin: 10px 8px 10px 0;
+  transition: 0.5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+}
+.container .social:hover {
+  background: #ffffff;
+  color: #1f242d;
   box-shadow: 0 0 20px #b7b2a9;
 }
 @keyframes slideLeft {

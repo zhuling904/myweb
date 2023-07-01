@@ -4,11 +4,12 @@
     justify-content: space-between;
     align-items: center;
     flex: 1;
+
     .left {
         position: relative;
         width: 620px;
         align-items: center;
-        color: white;
+        color: var(--color-font-black);
 
         .desc {
             h3 {
@@ -17,8 +18,9 @@
                 opacity: 0;
                 animation: slideBottom 1s ease forwards;
                 animation-delay: .7s;
+
                 span {
-                     color: #ac8978;
+                    color: #ac8978;
                 }
             }
 
@@ -49,45 +51,50 @@
         .link {}
 
         .buttonContaner {
-            cursor: pointer;
-            margin-top: 20px;
-            display: inline-block;
-            padding: 12px 28px;
-            background: rgb(232, 180, 156);
-            text-decoration: none;
-            border-radius: 40px;
-            box-shadow: 0 0 10px #fbfbfb;
-            font-size: 16px;
-            color: #f1f3f6;
-            letter-spacing: 1px;
-            font-weight: 600;
-            transition: 0.5s ease;
-            opacity: 0;
-            animation: slideTop 1s ease forwards;
-            animation-delay: 2s;
+            .button {
+                cursor: pointer;
+                margin-top: 20px;
+                display: inline-block;
+                padding: 12px 28px;
+                background: rgb(232, 180, 156);
+                text-decoration: none;
+                border-radius: 40px;
+                box-shadow: 0 0 10px #f3adad;
+                font-size: 16px;
+                color: white;
+                letter-spacing: 1px;
+                font-weight: 600;
+                transition: 0.5s ease;
+                opacity: 0;
+                animation: slideTop 1s ease forwards;
+                animation-delay: 1.2s;
+            }
+            .button:hover {
+                box-shadow: 0 0 20px #f3b2b2;
+            }
+    
+            .button:active {
+                background: none;
+                color: #f9f9f9;
+                border: 2px solid #e9c1b1;
+            }
+
         }
 
-        .buttonContaner:hover {
-            box-shadow: 0 0 20px #f6f6f6;
-            color: white
-        }
-
-        .buttonContaner:active {
-            background: none;
-            color: #f9f9f9;
-            border: 2px solid #e9c1b1;
-        }
+        
     }
 
     .right {
         display: flex;
         align-items: center;
+
         .homeImg {
             height: 100%;
             width: 100%;
             max-width: 450px;
             max-height: 450px;
             aspect-ratio: 1;
+
             img {
                 width: 100%;
                 height: 100%;
@@ -96,7 +103,7 @@
                 box-shadow: 0 0 20px #b7b2a9;
                 opacity: 0;
                 animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
-                animation-delay: 2s, 3s;
+                animation-delay: 1s, 2s;
             }
         }
     }

@@ -9,7 +9,7 @@
   position: relative;
   width: 620px;
   align-items: center;
-  color: white;
+  color: var(--color-font-black);
 }
 .container .left .desc h3 {
   font-size: 32px;
@@ -41,7 +41,7 @@
   animation: slideLeft 1s ease forwards;
   animation-delay: 0.7s;
 }
-.container .left .buttonContaner {
+.container .left .buttonContaner .button {
   cursor: pointer;
   margin-top: 20px;
   display: inline-block;
@@ -49,21 +49,20 @@
   background: #e8b49c;
   text-decoration: none;
   border-radius: 40px;
-  box-shadow: 0 0 10px #fbfbfb;
+  box-shadow: 0 0 10px #f3adad;
   font-size: 16px;
-  color: #f1f3f6;
+  color: white;
   letter-spacing: 1px;
   font-weight: 600;
   transition: 0.5s ease;
   opacity: 0;
   animation: slideTop 1s ease forwards;
-  animation-delay: 2s;
+  animation-delay: 1.2s;
 }
-.container .left .buttonContaner:hover {
-  box-shadow: 0 0 20px #f6f6f6;
-  color: white;
+.container .left .buttonContaner .button:hover {
+  box-shadow: 0 0 20px #f3b2b2;
 }
-.container .left .buttonContaner:active {
+.container .left .buttonContaner .button:active {
   background: none;
   color: #f9f9f9;
   border: 2px solid #e9c1b1;
@@ -87,7 +86,7 @@
   box-shadow: 0 0 20px #b7b2a9;
   opacity: 0;
   animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
-  animation-delay: 2s, 3s;
+  animation-delay: 1s, 2s;
 }
 @keyframes slideBottom {
   0% {
