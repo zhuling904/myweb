@@ -2,9 +2,13 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import autoprefixer from 'autoprefixer';
+import svgr from 'vite-plugin-svgr';
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    svgr()
+  ],
   root: path.resolve(__dirname, 'src'),
   css: {
     // 进行 PostCSS 配置
@@ -28,7 +32,13 @@ export default defineConfig({
         javascriptEnabled: true,
       },
     },
-  }
+  },
+  resolve: {
+    // 别名配置
+    alias: {
+      '@assets': path.join(__dirname, 'src/assets')
+    }
+  },
 })
 
 
