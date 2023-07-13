@@ -20,3 +20,6 @@ export default defineConfig({
     },
   }
 })
+
+
+// 生产环境打包完预览产物"preview": "vite preview"
