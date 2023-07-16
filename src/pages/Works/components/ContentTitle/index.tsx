@@ -3,13 +3,24 @@ import { LEFT_MENU_TABS } from '../LeftTabMenu/constants';
 import { CLASSIFY } from './constants';
 import style from './style/index.module.less';
 import classNames from 'classnames';
+import { LISTMAP, WorkItem } from '../../constants';
+import { MenuType } from '../LeftTabMenu';
 interface ContentTitlePropType {
-    title: string,
+    title: MenuType,
+    workList: WorkItem[],
+    setWorkList: Function,
 }
 const ContentTitle = (props: ContentTitlePropType) => {
-    const { title } = props;
+    const { title, setWorkList } = props;
     const [tabType, setTabType] = useState<string>(CLASSIFY[0].type);
     const tab = LEFT_MENU_TABS.find(tab => tab.type === title);
+    const getWorkList = (type: string) => {
+        const newWorks = LISTMAP[title].filter( item => {
+            return item.type !== tabType
+        })
+        setTabType(type)
+        setWorkList(newWorks)
+    }
     return <div className={style.container}>
         <div className={style.title}>
             全部{tab ? tab.title : null}
@@ -21,7 +32,7 @@ const ContentTitle = (props: ContentTitlePropType) => {
                         [style.tabItem]: true,
                         [style.isActive]: tabType === item.type
                     })}
-                        onClick={() => { setTabType(item.type) }}
+                        onClick={() => { getWorkList(item.type) }}
                     >
                         {item.title}
                     </div>

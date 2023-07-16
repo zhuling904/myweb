@@ -1,7 +1,14 @@
 import { MdAnimation } from 'react-icons/md';
 import { RxComponent1 } from 'react-icons/rx';
 import { BiSolidPencil } from 'react-icons/bi';
-export const LEFT_MENU_TABS = [
+import { ReactElement } from 'react';
+import { MenuType } from '.';
+type MenuTabs =  {
+    title: string,
+    type: MenuType,
+    icon: ReactElement,
+}
+export const LEFT_MENU_TABS: MenuTabs[] = [
     {
         title: '动画',
         type: 'animation',
