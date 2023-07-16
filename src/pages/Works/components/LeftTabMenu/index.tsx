@@ -2,8 +2,12 @@ import { useState } from 'react';
 import { LEFT_MENU_TABS } from './constants';
 import style from './style/index.module.less';
 import classNames from 'classnames';
-const LeftTabMenu = () => {
-    const [activeTab, setActiveTab] = useState<string>('animation');
+interface LeftTabMenuProps {
+    activeTab: string,
+    setActiveTab: Function,
+}
+const LeftTabMenu = (props: LeftTabMenuProps) => {
+    const { activeTab, setActiveTab } = props;
     return <div className={style.container}>
         {
             LEFT_MENU_TABS.map(item => {
@@ -11,7 +15,7 @@ const LeftTabMenu = () => {
                     [style.tabItem]: true,
                     [style.activeTab]: item.type === activeTab,
                 })}
-                onClick={()=>{setActiveTab(item.type)}}
+                    onClick={() => { setActiveTab(item.type) }}
                 >
                     <div className={style.icon}>{item.icon}</div>
                     <div className={style.name}>{item.title}</div>

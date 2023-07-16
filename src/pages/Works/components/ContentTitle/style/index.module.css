@@ -1,0 +1,29 @@
+.container .title {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: left;
+}
+.container .classify {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  padding: 12px 0;
+}
+.container .classify .tabItem {
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  width: fit-content;
+  background: transparent;
+  justify-content: center;
+  font-weight: 400;
+}
+.container .classify .isActive {
+  background-color: rgba(0, 0, 0, 0.05);
+}

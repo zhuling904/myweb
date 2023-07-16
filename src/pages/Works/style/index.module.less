@@ -11,9 +11,19 @@
     }
     .right {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         flex: 1;
         height: 100vh;
         background-color: rgb(255, 255, 255);
+        padding: 64px 64px 40px;
+    }
+
+    .workContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        gap: 10px;
+        flex-basis: 20%;
     }
 }

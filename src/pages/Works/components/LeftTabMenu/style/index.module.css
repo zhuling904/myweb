@@ -2,6 +2,7 @@
   margin-top: 40px;
 }
 .container .tabItem {
+  cursor: pointer;
   display: flex;
   align-items: center;
   opacity: 0.5;
