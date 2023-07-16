@@ -12,10 +12,8 @@
   background-color: #ffffff;
 }
 .container .right {
-  display: flex;
   flex-direction: column;
   flex: 1;
-  height: 100vh;
   background-color: #ffffff;
   padding: 64px 64px 40px;
 }
