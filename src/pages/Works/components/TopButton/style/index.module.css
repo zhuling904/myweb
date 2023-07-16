@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .left {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.container .left:hover {
+  opacity: 1;
+}
+.container .right {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.container .right:hover {
+  opacity: 1;
+}

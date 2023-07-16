@@ -1,6 +1,7 @@
 import { TbBrandJuejin } from "react-icons/tb";
 import { AiOutlineGithub, AiFillCodeSandboxCircle, AiOutlineWechat } from 'react-icons/ai';
 import { HiOutlineMailOpen } from 'react-icons/hi';
+import { RxGlobe } from 'react-icons/rx';
 export const SOCIAL_CONTACT = [
     {
         title: 'Juejin',
@@ -13,6 +14,11 @@ export const SOCIAL_CONTACT = [
     {
         title: 'CodeSandbox',
         link: 'https://codesandbox.io/u/hushancode',
+    },
+    {
+        title: 'KnowledgeBase',
+        link: 'https://nextjs-notion-starter-kit-phi-gray.vercel.app/?vercelToolbarCode=q7e6XSyBgBIeMSk',
+        info: '知识库'
     },
     {
         title: 'Email',
@@ -34,6 +40,8 @@ export function normalIcons(title: string) {
             return <AiOutlineGithub></AiOutlineGithub>;
         case 'CodeSandbox':
             return <AiFillCodeSandboxCircle></AiFillCodeSandboxCircle>;
+        case 'KnowledgeBase':
+            return <RxGlobe></RxGlobe>
         case 'Email':
             return <HiOutlineMailOpen></HiOutlineMailOpen>
         case 'WeChat':

@@ -1,14 +1,19 @@
 
-import Header from './components/Header';
-import Tabs from './components/Tabs';
-import WorkCard from './components/WorkCard';
+import LeftAvatar from './components/LeftAvatar';
+import LeftTabMenu from './components/LeftTabMenu';
+import TopButton from './components/TopButton';
 import style from './style/index.module.less';
 const Works = () => {
     return <>
         <div className={style.container}>
-            <Header></Header>
-            <Tabs></Tabs>
-            <WorkCard></WorkCard>
+            <div className={style.left}>
+                <TopButton></TopButton>
+                <LeftAvatar></LeftAvatar>
+                <LeftTabMenu></LeftTabMenu>
+            </div>
+            <div className={style.right}>
+                
+            </div>
         </div>
     </>
 }

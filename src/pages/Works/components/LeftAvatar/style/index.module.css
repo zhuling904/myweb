@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.container .img {
+  display: flex;
+}
+.container .img img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.container .name {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  font-size: 16px;
+  text-align: center;
+}

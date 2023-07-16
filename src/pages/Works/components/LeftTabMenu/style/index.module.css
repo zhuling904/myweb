@@ -1,0 +1,32 @@
+.container {
+  margin-top: 40px;
+}
+.container .tabItem {
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
+  height: 32px;
+  border-radius: 6px;
+  margin-top: 4px;
+}
+.container .tabItem .icon {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+}
+.container .tabItem .name {
+  font-size: 14px;
+  display: flex;
+  font-weight: 500;
+  margin-left: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.container .activeTab {
+  opacity: 1;
+  color: #1987e2;
+  background-color: #e5f3fe;
+}

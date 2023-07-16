@@ -1,8 +1,8 @@
 export const PAGES = [{
-    title: 'Works',
+    title: '作品',
     router: '/works'
 }, {
-    title: 'Timeline',
+    title: '关于我',
     router: '/timeline'
 }];
-export const WEB_NAME = ['Protfolio.'];
+export const WEB_NAME = ['首页.'];
