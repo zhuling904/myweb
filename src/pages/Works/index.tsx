@@ -36,7 +36,6 @@ const Works = () => {
                                     desc={item.desc}
                                     miniImg={item.miniImg}
                                     coverImg={item.coverImg}
-
                                 />
                             </>
                         })

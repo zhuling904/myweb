@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { LEFT_MENU_TABS } from '../LeftTabMenu/constants';
 import { CLASSIFY } from './constants';
 import style from './style/index.module.less';
@@ -14,12 +14,17 @@ const ContentTitle = (props: ContentTitlePropType) => {
     const { title, setWorkList } = props;
     const [tabType, setTabType] = useState<string>(CLASSIFY[0].type);
     const tab = LEFT_MENU_TABS.find(tab => tab.type === title);
+
+    useEffect(() => {
+        setTabType(CLASSIFY[0].type)
+    }, [title])
+
     const getWorkList = (type: string) => {
-        const newWorks = LISTMAP[title].filter( item => {
-            return item.type !== tabType
+        const newWorks = LISTMAP[title].filter(item => {
+            return item.type === type
         })
         setTabType(type)
-        setWorkList(newWorks)
+        setWorkList(type !== CLASSIFY[0].type ? newWorks : LISTMAP[title])
     }
     return <div className={style.container}>
         <div className={style.title}>
