@@ -3,6 +3,6 @@ export const PAGES = [{
     router: '/works'
 }, {
     title: '关于我',
-    router: '/timeline'
+    router: '/about'
 }];
 export const WEB_NAME = ['首页.'];

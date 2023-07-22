@@ -1,6 +1,6 @@
 import Home from "../pages/Home";
-import TimeLine from "../pages/Timeline";
 import Works from "../pages/Works";
+import About from "../pages/About";
 import { ROUTER_CONFIG } from "./typing";
 const routesConfig: ROUTER_CONFIG[] = [
     {
@@ -14,9 +14,9 @@ const routesConfig: ROUTER_CONFIG[] = [
         element: <Works/>,
     },
     {
-        path: "/timeline",
-        title: "Timeline",
-        element: <TimeLine/>,
+        path: "/about",
+        title: "About",
+        element: <About/>,
     },
 ]
 export default routesConfig;

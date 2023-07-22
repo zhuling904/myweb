@@ -1,5 +1,5 @@
 import style from './style/index.module.less';
-import imgUrl from './img/3D.jpg';
+import imgUrl from './img/3D.svg';
 import Typed from 'typed.js';
 import React, { useEffect } from 'react';
 import SocialContact from '../SocialContact';

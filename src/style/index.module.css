@@ -1,12 +1,13 @@
 :root {
   --color-font-black: #282938;
   --color-bg-black: #282938;
+  --notion-font: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Noto Sans",sans-serif;
+  --fg-color: #37352f;
+  --bg-color: #fff;
 }
 body {
   width: 100%;
   height: 100%;
   background: #ffffff;
   margin: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }

@@ -19,7 +19,7 @@
   animation-delay: 0.7s;
 }
 .container .left .desc h3 span {
-  color: #ac8978;
+  color: #4085db;
 }
 .container .left .desc h3:nth-of-type(2) {
   margin-bottom: 30px;
@@ -46,10 +46,10 @@
   margin-top: 20px;
   display: inline-block;
   padding: 12px 28px;
-  background: #e8b49c;
+  background: #4085db;
   text-decoration: none;
   border-radius: 40px;
-  box-shadow: 0 0 10px #f3adad;
+  box-shadow: 0 0 10px #4085db;
   font-size: 16px;
   color: white;
   letter-spacing: 1px;
@@ -60,12 +60,12 @@
   animation-delay: 1.2s;
 }
 .container .left .buttonContaner .button:hover {
-  box-shadow: 0 0 20px #f3b2b2;
+  box-shadow: 0 0 20px #5294e4;
 }
 .container .left .buttonContaner .button:active {
-  background: none;
+  background: #124584;
   color: #f9f9f9;
-  border: 2px solid #e9c1b1;
+  border: 2px solid #4085db;
 }
 .container .right {
   display: flex;
