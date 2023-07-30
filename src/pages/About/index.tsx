@@ -22,7 +22,6 @@ const About = () => {
             <div className={style.Experience}><h3>职业经历</h3></div>
             <div className={style.todo}><h3>成为什么样的人</h3></div>
             <div className={style.life}><h3>日常生活</h3></div>
-
         </div>
     </>
 }

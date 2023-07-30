@@ -8,7 +8,7 @@ interface WorkCardProps {
 const WorkCard = (props: WorkCardProps) => {
     const { desc, link, coverImg, miniImg } = props;
     return <div className={style.container}
-        onClick={() => { window.open(link, '_blank') }}
+        onClick={() => { window.open(link, "_blank") }}
     >
         <div className={style.top}>
             <img src={coverImg} alt="" />
