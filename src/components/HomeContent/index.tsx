@@ -1,14 +1,31 @@
 import style from './style/index.module.less';
 import imgUrl from './img/3D.svg';
 import Typed from 'typed.js';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import SocialContact from '../SocialContact';
 import { NavLink } from 'react-router-dom';
+import { getWebInfo } from '../../api/webInfo';
+import { SOCIAL, WEBINFO } from './type';
 const HomeContent = () => {
     const el = React.useRef(null);
+    const [webInfo, setWebInfo] = useState<WEBINFO>();
+    // 请求首页数据
     useEffect(() => {
+        getWebInfo()
+            .then(res => {
+                console.log("✅ ~ zhuling res:", res.data)
+                setWebInfo(res.data)
+            })
+            .catch(err => {
+                console.trace("✅ ~ zhuling err:", err)
+            })
+    }, [])
+
+    useEffect(() => {
+        if (!webInfo) return;
+        const { roles } = webInfo as WEBINFO;
         const typed = new Typed(el.current, {
-            strings: ['前端工程师', "篮球爱好者"],
+            strings: roles,
             typeSpeed: 100,
             backSpeed: 100,
             backDelay: 500,
@@ -18,19 +35,23 @@ const HomeContent = () => {
         return () => {
             typed.destroy();
         };
-    }, []);
-
+    }, [webInfo]);
+    if (!webInfo) return;
+    const { author, motto, social, avatarImg } = webInfo as WEBINFO;
     return <>
         <div className={style.container}>
             <div className={style.left}>
                 <div className={style.desc}>
                     <h3>你好👋！</h3>
-                    <h1>我是 <i>朱领</i></h1>
+                    <h1>我是 <i>{author}</i></h1>
                     <h3>我是一个 <span ref={el}></span></h3>
-                    <p>或许你不相信现在的我，但你可以期待未来的我。</p>
+                    <p>{motto}</p>
                 </div>
                 <div className={style.link}>
-                    <SocialContact type='withBorder'/>
+                    <SocialContact
+                        type='withBorder'
+                        social={social as SOCIAL[]}
+                    />
                 </div>
                 <div className={style.buttonContaner}>
                     <NavLink className={style.button} to={'/works'}>开始探索</NavLink>
@@ -38,7 +59,7 @@ const HomeContent = () => {
             </div>
             <div className={style.right}>
                 <div className={style.homeImg}>
-                    <img src={imgUrl} alt="" />
+                    <img src={avatarImg} alt="" />
                 </div>
             </div>
         </div>

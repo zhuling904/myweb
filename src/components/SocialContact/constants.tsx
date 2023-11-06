@@ -33,6 +33,7 @@ export const SOCIAL_CONTACT = [
 ]
 
 export function normalIcons(title: string) {
+    console.log("✅ ~ zhuling title:", title)
     switch (title) {
         case 'Juejin':
             return <TbBrandJuejin></TbBrandJuejin>;
