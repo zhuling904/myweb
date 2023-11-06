@@ -1,94 +1,31 @@
+import { FaCss3Alt } from "react-icons/fa";
+import { LiaReact } from "react-icons/lia";
+export const TABS_CONFIG = [
+  {
+    title: "React",
+    icons: <LiaReact />,
+  },
+  {
+    title: "CSS",
+    icons: <FaCss3Alt />,
+  },
+];
 
-import { FaCss3Alt } from 'react-icons/fa';
-import { LiaReact } from 'react-icons/lia';
-export const TABS_CONFIG = [{
-    title: 'React',
-    icons: <LiaReact/>,
-},{
-    title: 'CSS',
-    icons: <FaCss3Alt/>,
-}]
-
-export type WorkItem = {
-    desc: string,
-    type: string,
-    link: string,
-    coverImg: string,
-    miniImg: string,
+export interface WORKITEM {
+  type: string;
+  subType: string;
+  tags: string[];
+  title: string;
+  desc: string;
+  coverImg: string;
+  link: string;
+  avatarImg: string;
+  likes: number;
+  visitors: number;
 }
 
 // 动画
-export const WORKS_LIST: WorkItem[] = [{
-    desc: '这是一个描述',
-    type: 'latest',
-    link: 'http://zhuling.net.cn/',
-    coverImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f',
-    miniImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f'
-}]
 
 // 组件数据
-export const COMP_WORKS_LIST: WorkItem[] = [{
-    desc: '组件list',
-    type: 'latest',
-    link: 'http://zhuling.net.cn/',
-    coverImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f',
-    miniImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f'
-}]
 
 // 手写数据
-export const WRITE_WORKS_LIST: WorkItem[] = [{
-    desc: '01防抖',
-    type: 'other',
-    link: 'https://codesandbox.io/s/fang-dou-chhq2k',
-    coverImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f',
-    miniImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f'
-},{
-    desc: '02节流',
-    type: 'other',
-    link: 'https://codesandbox.io/s/jie-liu-d46s4r',
-    coverImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f',
-    miniImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f'
-},{
-    desc: '03instanceof',
-    type: 'other',
-    link: 'https://codesandbox.io/s/instanceof-fqsyvz',
-    coverImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f',
-    miniImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f'
-},{
-    desc: '04new',
-    type: 'other',
-    link: 'https://codesandbox.io/s/new-rn3m57',
-    coverImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f',
-    miniImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f'
-},{
-    desc: '04call',
-    type: 'array',
-    link: 'https://codesandbox.io/s/shou-xie-call-8lz7jc',
-    coverImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f',
-    miniImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f'
-},{
-    desc: '05apply',
-    type: 'array',
-    link: 'https://codesandbox.io/s/shou-xie-apply-kdh535',
-    coverImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f',
-    miniImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f'
-},{
-    desc: '06apply',
-    type: 'array',
-    link: 'https://codesandbox.io/s/shou-xie-bind-xx65jn',
-    coverImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f',
-    miniImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f'
-},{
-    desc: '07Object.create',
-    type: 'object',
-    link: 'https://codesandbox.io/s/object-create-x7d4f3?file=/src/index.js',
-    coverImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f',
-    miniImg: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F15%2F20200215152022_crpqz.thumb.1000_0.gif&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1692105634&t=abde2a13025e084556ba6a0c93e09b5f'
-},]
-
-
-export const LISTMAP = {
-    animation: WORKS_LIST,
-    component: COMP_WORKS_LIST,
-    write: WRITE_WORKS_LIST
-}
