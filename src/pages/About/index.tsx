@@ -2,7 +2,23 @@
 import style from './style/index.module.less';
 import avatar from '../../components/HomeContent/img/3D.png';
 import bg from '../../components/HomeContent/img/bg.avif';
+import { useEffect, useState } from 'react';
+import { getAboutInfo } from '../../api/about';
+import { ABOUT } from './type';
 const About = () => {
+    const [aboutInfo, setAboutInfo] = useState<ABOUT>();
+    useEffect(() => {
+        getAboutInfo()
+            .then((res) => {
+                console.log("✅ ~ zhuling res:", res.data);
+                setAboutInfo(res.data);
+            })
+            .catch((err) => {
+                console.error("✅ ~ zhuling err:", err);
+            });
+    }, [])
+    if (!aboutInfo) return null;
+    const { author, introduce, skills, experience, future, lifeImgList } = aboutInfo;
     return <>
         <div className={style.container}>
             <div className={style.topImg}>
@@ -16,7 +32,7 @@ const About = () => {
             <div className={style.title}><h2>关于我</h2></div>
             <div className={style.desc}>
                 <p>你好 👋</p>
-                <p>我是 <span className={style.name}>朱领</span> ，一个热爱生活和分享技术的前端工程师。我希望能够通过我的博客，与大家分享我的生活态度、经历和技术的学习，希望带给大家一些启发和帮助！</p>
+                <p>我是 <span className={style.name}>{author}</span> ，{introduce}</p>
             </div>
             <div className={style.skill}><h3>技能</h3></div>
             <div className={style.Experience}><h3>职业经历</h3></div>
