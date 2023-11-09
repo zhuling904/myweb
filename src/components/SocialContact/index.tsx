@@ -14,7 +14,7 @@ const SocialContact = (props: SocialContactProps) => {
     return <>
         <div className={style.container}>
             {
-                social.map((item, index) => {
+                social?.map((item, index) => {
                     return <>
                         <Tooltip title={item.info} placement='top' color={'#282938'}>
                             <div onClick={() => { handleLink(item.link) }} className={classNames({
