@@ -5,7 +5,7 @@ const MyRouter = () => {
   return (
     <>
       <Routes>
-        {routesConfig.map((item: ROUTER_CONFIG) => {
+        {routesConfig?.map((item: ROUTER_CONFIG) => {
           return (
             <Route
               key={item.title}

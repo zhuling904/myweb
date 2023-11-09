@@ -13,7 +13,7 @@ const HomeContent = () => {
     getWebInfo()
       .then((res) => {
         console.log("✅ ~ zhuling res:", res.data);
-        setWebInfo(res.data);
+        setWebInfo(res.data[0]);
       })
       .catch((err) => {
         console.error("✅ ~ zhuling err:", err);
@@ -37,6 +37,7 @@ const HomeContent = () => {
   }, [webInfo]);
   if (!webInfo) return;
   const { author, motto, social, avatarImg } = webInfo as WEBINFO;
+  console.log("✅ ~ zhuling social:", social)
   return (
     <>
       <div className={style.container}>

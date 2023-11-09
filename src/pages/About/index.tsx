@@ -10,8 +10,8 @@ const About = () => {
     useEffect(() => {
         getAboutInfo()
             .then((res) => {
-                console.log("✅ ~ zhuling res:", res.data);
-                setAboutInfo(res.data);
+                console.log("✅ ~ zhuling res:", res.data[0]);
+                setAboutInfo(res.data[0]);
             })
             .catch((err) => {
                 console.error("✅ ~ zhuling err:", err);

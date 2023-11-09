@@ -36,8 +36,8 @@ const Works = () => {
   useEffect(() => {
     getWebInfo()
       .then((res) => {
-        console.log("✅ ~ zhuling res webInfo:", res.data);
-        setWebInfo(res.data);
+        console.log("✅ ~ zhuling res webInfo:", res.data[0]);
+        setWebInfo(res.data[0]);
       })
       .catch((err) => {
         console.error("✅ ~ zhuling err webInfo:", err);
@@ -72,7 +72,7 @@ const Works = () => {
             setFilterWorkList={setFilterWorkList}
           ></ContentTitle>
           <div className={style.workContainer}>
-            {filterWorkList.map((item) => {
+            {filterWorkList?.map((item) => {
               return (
                 <>
                   <WorkCard
