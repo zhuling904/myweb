@@ -18,7 +18,7 @@ const About = () => {
             });
     }, [])
     if (!aboutInfo) return null;
-    const { author, introduce, skills, experience, future, lifeImgList } = aboutInfo;
+    const { author, introduce } = aboutInfo;
     return <>
         <div className={style.container}>
             <div className={style.topImg}>

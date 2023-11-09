@@ -1,5 +1,5 @@
 import { Tooltip } from 'antd';
-import { SOCIAL_CONTACT, normalIcons } from './constants';
+import { normalIcons } from './constants';
 import style from './style/index.module.less';
 import classNames from 'classnames';
 import { SOCIAL } from '../HomeContent/type';
