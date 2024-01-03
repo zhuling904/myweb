@@ -1,67 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: transparent;
-    padding: 24px 0;
-    color: #282938;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 24px 0;
+  color: #282938;
 
-    .left {
-        .webName {
-            font-size: 25px;
-            color: #282938;
-            // 文本修饰
-            text-decoration: none;
-            font-weight: 600;
-            cursor: pointer;
-            opacity: 0;
-            animation: slideRight 1s ease forwards;
-        }
+  .left {
+    .webName {
+      font-size: 25px;
+      color: #282938;
+      // 文本修饰
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+      opacity: 1;
     }
+  }
 
-    .right {
-        .pages {
-            .pageName {
-                cursor: pointer;
-                display: inline-block;
-                font-size: 18px;
-                color: #282938;
-                text-decoration: none;
-                font-weight: 500;
-                margin-left: 35px;
-                opacity: 0;
-                transition: 0.3s;
-                animation: slideTop 1s ease forwards;
-                &:hover{
-                    color: #696a6e;
-                }
-            }
-        }
-    }
-}
-
-
-/* 动画 */
-
-@keyframes slideRight {
-    0% {
-        transform: translateX(-100px);
-    }
-
-    100% {
-        transform: translateX(0);
+  .right {
+    .pages {
+      .pageName {
+        cursor: pointer;
+        display: inline-block;
+        font-size: 18px;
+        color: #282938;
+        text-decoration: none;
+        font-weight: 500;
+        margin-left: 35px;
         opacity: 1;
+        transition: 0.3s;
+        &:hover {
+          color: #696a6e;
+        }
+      }
     }
-}
-
-@keyframes slideTop {
-    0% {
-        transform: translateY(100px);
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  }
 }
