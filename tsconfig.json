@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    // 只编译修改过的文件,这个时候会生成tsconfig.tsbuildinfo,下次编译的时候会进行对比只编译修改过的文件 
+    // 只编译修改过的文件,这个时候会生成tsconfig.tsbuildinfo,下次编译的时候会进行对比只编译修改过的文件
     "incremental": true,
     // 指定 ECMAScript 目标版本: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'
     "target": "ESNext",
@@ -9,13 +9,7 @@
        对于 --target ES5: DOM,ES5,ScriptHost
        对于 --target ES6: DOM,ES6,DOM.Iterable,ScriptHost
        TS 绝不会在您的代码中注入polyfill,所以需要你自己制定编译lib */
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable",
-      "ES6",
-      "ES7"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable", "ES6", "ES7"],
     "allowJs": true,
     // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
     "module": "ESNext",
@@ -31,7 +25,7 @@
     // 1. noEmit 表示只做类型检查，而不会输出产物文件
     // 2. 这行配置与 tsc --noEmit 命令等效
     "noEmit": true,
-     // 指定 jsx 代码的生成: 'preserve', 'react-native', or 'react'
+    // 指定 jsx 代码的生成: 'preserve', 'react-native', or 'react'
     "jsx": "react-jsx",
     /* Linting */
     "strict": true,
@@ -42,11 +36,13 @@
     "noFallthroughCasesInSwitch": true
   },
   // 指定需要编译文件 否则默认当前目录下除了exclude之外的所有.ts, .d.ts,.tsx 文件
-  "include": [
-    "src"
-  ],
+  "include": ["src"],
   // 指定需要编译文件 否则默认当前目录下除了exclude之外的所有.ts, .d.ts,.tsx 文件
-  "files": ["./type/typing.d.ts", "./type/styles.d.ts"],
+  "files": [
+    "./type/typing.d.ts",
+    "./type/styles.d.ts",
+    "./node_modules/react-canvasKit/dist/index.d.ts"
+  ],
   // 不编译某些文件
   "exclude": [],
   "references": [
